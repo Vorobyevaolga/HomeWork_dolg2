@@ -1,14 +1,13 @@
 public class Author {
 
-    private String name;
-    private String lastName;
-    private int age;
+    private final String name;
+    private final String lastName;
 
-    public Author(String name, String lastName, int age) {
+
+    public Author(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
-        this.age = age;
-    }
+            }
 
     public String getName() {
         return this.name;
@@ -18,9 +17,6 @@ public class Author {
         return this.lastName;
     }
 
-    public int getAge() {
-        return this.age;
-    }
 
     public boolean equals(Object object) {
         if (this == object)
@@ -30,7 +26,7 @@ public class Author {
         if (!super.equals(object))
             return false;
         Author author = (Author) object;
-        return age == author.age && java.util.Objects.equals(name, author.name) && java.util.Objects.equals(lastName, author.lastName);
+        return java.util.Objects.equals(name, author.name) && java.util.Objects.equals(lastName, author.lastName);
     }
 
     public int hashCode() {

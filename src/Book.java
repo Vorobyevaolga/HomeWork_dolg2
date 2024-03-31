@@ -1,6 +1,6 @@
 public class Book {
-    private String nameBook;
-    private Author nameAuthor;
+    private final String nameBook;
+    private final Author nameAuthor;
     private int yearBook;
 
     public Book(String nameBook, Author nameAuthor, int yearBook){
